@@ -21,3 +21,5 @@ Running from remote environment
 ```
 mlflow run -v {release_tag} repository_url -P hydra_options="main.project_name=classification_prod"
 ```
+
+`mlflow run -v 1.0.0 https://github.com/eedygreen/genre_classification.git -P hydra_options="main.project_name=released_prod_version"`
