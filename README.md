@@ -1,5 +1,8 @@
 Running the pipeline with MLflow
-In this step, we will run our pipeline using MLflow. We will use the mlflow run command to execute our pipeline and track the results. We can specify different parameters and options to customize the execution of our pipeline. For example, we can specify the steps to execute using the main.execute_steps parameter. This allows us to run only specific steps of the pipeline, which can be useful for testing and debugging. 
+
+Running from local environment 
+
+These command requires cloning this repository
 ```
 mlflow run . -P hydra_options="main.execute_steps='random_forest'"
 ```
@@ -11,4 +14,10 @@ mlflow run . -P hydra_options="main.execute_steps='download,preprocess'"
 Inference 
 ```
 mlflow run . -P hydra_options="main.project_name=classification_prod"
+```
+
+Running from remote environment
+
+```
+mlflow run -v {release_tag} repository_url -P hydra_options="main.project_name=classification_prod"
 ```
