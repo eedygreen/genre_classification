@@ -1,0 +1,10 @@
+*.zip
+venv
+.obsidian
+.ipynb_*
+Anaconda*
+*__pycache__
+.pytest_cache
+artifacts
+wandb
+mlflow.db
