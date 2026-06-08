@@ -23,3 +23,8 @@ mlflow run -v {release_tag} repository_url -P hydra_options="main.project_name=c
 ```
 
 `mlflow run -v 1.0.0 https://github.com/eedygreen/genre_classification.git -P hydra_options="main.project_name=released_prod_version"`
+
+offline (Batching)
+```
+mlflow models predict -t json -i model/input_example.json -m model/
+```
